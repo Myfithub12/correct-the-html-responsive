@@ -182,3 +182,25 @@ hr {
 		margin: 0;
 	}
 }
+
+/* Default: single column */
+.main .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Existing media query — switch to row layout */
+@media (min-width: 768px) {
+    .main .container {
+        flex-direction: row;
+    }
+
+    .main-article {
+        flex: 2;
+    }
+
+    .main-sidebar {
+        flex: 1;
+    }
+}
